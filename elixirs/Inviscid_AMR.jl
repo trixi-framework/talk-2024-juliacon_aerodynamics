@@ -52,6 +52,7 @@ volume_integral = VolumeIntegralShockCapturingHG(shock_indicator;
 solver = DGSEM(polydeg = polydeg, surface_flux = surface_flux,
                volume_integral = volume_integral)
 
+cd(@__DIR__)
 path = "../mesh_data/"
 mesh = "NACA4412_2_2D_unique.inp"
 mesh_file = path * mesh

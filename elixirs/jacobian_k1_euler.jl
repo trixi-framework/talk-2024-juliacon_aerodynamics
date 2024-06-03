@@ -40,6 +40,7 @@ surface_flux = flux_hllc
 
 solver = DGSEM(polydeg = polydeg, surface_flux = surface_flux)
 
+cd(@__DIR__)
 path = "../mesh_data/"
 mesh = "NACA4412_2_2D_unique.inp"
 mesh_file = path * mesh
@@ -68,3 +69,12 @@ N_plot = 800
 A_sparse = sparse(A[1:N_plot, 1:N_plot])
 
 spy(A_sparse, xlabel = "\$j\$", ylabel = "\$i\$", colorbar = false, legend = nothing)
+
+using LinearAlgebra
+
+Eigenvalues = eigvals(A)
+
+EigValsReal = real(Eigenvalues)
+EigValsImag = imag(Eigenvalues)
+
+scatter(EigValsReal, EigValsImag, label = "Spectrum")
