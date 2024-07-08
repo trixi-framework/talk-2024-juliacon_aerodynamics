@@ -457,12 +457,12 @@ function analyze_pointwise(analysis_quantities::Tuple{}, du, u, t, semi, iter)
 end
 
 function Trixi.analyze(quantity, du, u, t, semi::Trixi.AbstractSemidiscretization, iter)
-                 mesh, equations, solver, cache = Trixi.mesh_equations_solver_cache(semi)
-                 Trixi.analyze(quantity, du, u, t, mesh, equations, solver, cache, iter)
+                       mesh, equations, solver, cache = Trixi.mesh_equations_solver_cache(semi)
+    Trixi.analyze(quantity, du, u, t, mesh, equations, solver, cache, iter)
 end
 
 function Trixi.analyze(quantity::AnalysisSurfaceIntegral{Variable}, du, u, t,
-                 semi::Trixi.AbstractSemidiscretization) where {Variable}
+                       semi::Trixi.AbstractSemidiscretization) where {Variable}
     mesh, equations, solver, cache = Trixi.mesh_equations_solver_cache(semi)
     Trixi.analyze(quantity, du, u, t, mesh, equations, solver, cache, semi)
 end
