@@ -1,3 +1,5 @@
+# See PR https://github.com/trixi-framework/Trixi.jl/pull/1920
+
 using Trixi
 
 mutable struct AnalysisCallback{Analyzer, AnalysisIntegrals, AnalysisPointwise,
