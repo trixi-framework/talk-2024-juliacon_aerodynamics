@@ -19,6 +19,10 @@ In more detail, we discuss the import of bilinear meshes into P4est.jl, a Julia 
 
 As we delve into the technicalities of Trixi.jl, we shine a spotlight on its pragmatic application in real-world aerodynamic scenarios. The presentation underscores the straightforward integration of advanced features, notably adaptive mesh refinement (AMR), automatic differentiation through ForwardDiff.jl and shock capturing, showcasing their utility in enhancing the precision, robustness and efficiency of simulations.
 
+## Recording
+
+The talk has been recorded and is publicly available on [YouTube](https://www.youtube.com/live/-2OkeCpRB-Y?si=OhGkvsMkyvhBVNRf). Please note that the speaker is only poorly visible due to adverse light conditions.
+
 ## About this Reproducibility Repository
 
 This repository contains all necessary files to re-run the simulations involving the NACA4412 airfoil shown in the presentation.
